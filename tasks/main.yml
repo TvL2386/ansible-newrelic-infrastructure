@@ -1,0 +1,34 @@
+---
+# tasks file for TvL2386.newrelic-infrastructure
+- name: Manage newrelic-infra apt key
+  apt_key:
+    url: "{{ newrelic_gpg_url }}"
+
+- name: Manage newrelic-infra apt repository
+  apt_repository:
+    repo: "{{ newrelic_repo }}"
+    update_cache: yes
+
+- name: Installing newrelic-infra package
+  package:
+    name: newrelic-infra
+    state: present
+
+- name: Configure newrelic-infra
+  copy:
+    content: "license_key: {{ newrelic_license_key }}"
+    dest: /etc/newrelic-infra.yml
+    owner: root
+    group: root
+    mode: 0640
+  notify: restart newrelic-infra
+
+- name: Enable newrelic-infra service
+  systemd:
+    name: newrelic-infra
+    enabled: yes
+
+- name: Start newrelic-infra service
+  systemd:
+    name: newrelic-infra
+    state: started

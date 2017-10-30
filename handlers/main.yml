@@ -1,0 +1,6 @@
+---
+# handlers file for TvL2386.newrelic-infrastructure
+- name: restart newrelic-infra
+  systemd:
+    name: newrelic-infra
+    state: restarted

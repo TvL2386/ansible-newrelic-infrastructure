@@ -1,0 +1,17 @@
+galaxy_info:
+  author: TvL2386
+  description: simple role to manage newrelic-infra
+
+  license: MIT
+
+  min_ansible_version: 2.0
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+
+  galaxy_tags:
+  - newrelic
+
+dependencies: []

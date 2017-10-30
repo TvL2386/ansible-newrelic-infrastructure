@@ -1,0 +1,5 @@
+---
+# defaults file for TvL2386.newrelic-infrastructure
+newrelic_license_key: ""
+newrelic_repo: "deb [arch=amd64] https://download.newrelic.com/infrastructure_agent/linux/apt xenial main"
+newrelic_gpg_url: "https://download.newrelic.com/infrastructure_agent/gpg/newrelic-infra.gpg"
