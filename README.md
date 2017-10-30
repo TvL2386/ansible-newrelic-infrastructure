@@ -6,7 +6,7 @@ This role installs the newrelic-infrastructure agent
 Role Variables
 --------------
 
-newrelic_license_key: the_license_key
+newrelic_license_key: the_key
 
 Example Playbook
 ----------------
@@ -22,7 +22,3 @@ License
 
 MIT
 
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
